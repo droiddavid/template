@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success bg-gradient fixed-top" 
+[ngStyle]="{ 'padding': '1rem'}">
+	<a class="navbar-brand text-white" href="#">{{title}}</a>
+
+	<button #navbarToggler
+		class="navbar-toggler" 
+		type="button" 
+		(click)="toggler()" 
+		data-toggle="collapse" 
+		data-target="#navbarNav" 
+		aria-controls="navbarNav" 
+		aria-expanded="false" 
+		aria-label="Toggle navigation"
+		[ngStyle]="{'margin-right': '1rem'}"
+	>
+		<span class="navbar-toggler-icon text-white"></span>
+	</button>
+
+	<div #thelist class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		<ul class="navbar-nav mb-2 mb-lg-0" style="white-space: nowrap;">
+			<li *ngFor="let item of menuItems" class={{item.liClass}}>
+				<a 
+					class={{item.aClasses}} 
+					routerLink={{item.routerLink}} 
+					href={{item.href}} 
+					(click)="toggler()"
+				>
+					{{ item.text }}
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+   
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+	<div class="container">
+
+
+		<div class="navbar-left"> -->
+			<!-- Place your icon/graphic here -->
+			<!-- <a class="navbar-brand" href="#">{{ title }}</a>
+		</div>
+
+
+		<button #navbarToggler class="navbar-toggler" type="button"
+			aria-controls="navbar_menu" aria-expanded="false" 
+			aria-label="Toggle navigation" (click)="toggler()">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+
+		<div #thelist id="navbar_menu" 
+			class="navbar-nav navbar-expand-md ml-auto">
+			<ul class="navbar-nav mb-2 mb-lg-0">
+				<li class={{item.liClass}} *ngFor="let item of menuItems">
+					<a 
+						class={{item.aClasses}}
+						routerLink={{item.routerLink}}
+						href={{item.href}}
+						(click)="toggler()"
+					>
+						{{ item.text }}
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav> -->
