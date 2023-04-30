@@ -45,12 +45,13 @@ export class AppComponent implements AfterViewInit {
 			let appHeaderHeight = this.appHeader.firstChild.clientHeight;
 			this.appSpacerHeader = document.querySelector('#spacer_header');
 			this.appSpacerHeader.style.height = appHeaderHeight + 'px';
-			this.appSpacerHeader.style.marginBottom = '2rem';
+			this.appSpacerHeader.style.marginBottom = '1rem';
 	
 			this.appFooter = document.querySelector('app-footer');
 			let appFooterHeight = this.appFooter.firstChild.clientHeight;
-			this.appSpacerFooter = document.querySelector('#spacer_header');
+			this.appSpacerFooter = document.querySelector('#spacer_footer');
 			this.appSpacerFooter.style.height = appFooterHeight + 'px';
+			this.appSpacerFooter.style.marginTop = '1rem';
 		}
 	
 		onTitleChange(event:any) {
